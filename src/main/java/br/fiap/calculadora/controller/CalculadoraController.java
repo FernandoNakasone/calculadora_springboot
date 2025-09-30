@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class CalculadoraController {
 
-    private CalculadoraService service = new CalculadoraService();
+    private CalculadoraService service;
+
+    public CalculadoraController(CalculadoraService service){
+        this.service = service;
+    }
 
     @PostMapping("/calculadora")
     public String calculadora(@RequestParam double num1, @RequestParam double num2, @RequestParam String operador, Model model){
