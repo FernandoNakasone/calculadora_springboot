@@ -41,6 +41,7 @@ public class CalculadoraController {
         model.addAttribute("num2", num2);
         model.addAttribute("resultado", resultado);
         model.addAttribute("erro",erro);
+        model.addAttribute("operador",operador);
 
         return "index";
     }

@@ -4,6 +4,7 @@ package br.fiap.calculadora.service;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 @Service
 public class CalculadoraService {
@@ -36,7 +37,7 @@ public class CalculadoraService {
                     throw new IllegalArgumentException("O segundo número deve ser diferente de zero '0'");
                 }
 
-                yield n1.divide(n2,6);
+                yield n1.divide(n2,6, RoundingMode.HALF_UP);
             }
             default -> throw  new IllegalArgumentException("Operação inválida");
         };
