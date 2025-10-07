@@ -1,0 +1,101 @@
+/* Resetando algumas margens e preenchimentos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo básico para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color:black;
+}
+
+/* Estilo para o formulário */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Estilo para as labels */
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+/* Estilo para os campos de entrada */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Estilo para os radio buttons e labels */
+div p {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Estilo para os labels de radio buttons */
+label[for="operador"],
+label[for="subtracao"],
+label[for="multiplicacao"],
+label[for="divisao"] {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* Estilo para o botão */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para o resultado */
+section {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+section strong {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Estilo para erros */
+p {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
