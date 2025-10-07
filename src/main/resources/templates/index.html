@@ -7,10 +7,10 @@
 <body>
 <form th:action="@{/calculadora}" method="post">
     <label>Primeiro número</label>
-    <input type="number" name="num1" placeholder="informe o 1º número" required>
+    <input type="number" name="num1" placeholder="informe o 1º número"  required>
 
     <label>Segundo número</label>
-    <input type="number" name="num2" placeholder="informe o 2º número" required>
+    <input type="number" name="num2" placeholder="informe o 2º número" th:text="${num2}" required>
 
     <div>
         <p>Selecione o operador</p>
@@ -33,7 +33,10 @@
 
 </form>
 
- <p th:if="${resultado != null}">Resultado: <strong th:text="${resultado}"></strong></p>
+<section  th:if="${resultado != null}">
+    <p>Resultado: <strong th:text="${resultado}"></strong></p>
+</section>
+<p th:text="${erro}"></p>;
 
 </body>
 </html>

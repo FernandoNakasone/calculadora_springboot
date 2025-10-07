@@ -29,8 +29,18 @@ public class CalculadoraController {
     @PostMapping("/calculadora")
     public String calculadora(@RequestParam String num1, @RequestParam String num2, @RequestParam String operador, Model model){
 
-        BigDecimal resultado = service.calcular(num1,num2,operador);
+        String erro = "";
+        BigDecimal resultado = null;
+
+        try {
+            resultado = service.calcular(num1, num2, operador);
+        } catch (Exception e){
+            erro = e.getMessage();
+        }
+        model.addAttribute("num1", num1);
+        model.addAttribute("num2", num2);
         model.addAttribute("resultado", resultado);
+        model.addAttribute("erro",erro);
 
         return "index";
     }
