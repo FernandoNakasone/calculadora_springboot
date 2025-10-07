@@ -36,12 +36,19 @@ public class CalculadoraService {
                     throw new IllegalArgumentException("O segundo número deve ser diferente de zero '0'");
                 }
 
-                n1.divide(n2);
+                yield n1.divide(n2,6);
             }
-        }
+            default -> throw  new IllegalArgumentException("Operação inválida");
+        };
+    }
 
-        return n1;
-
+    public BigDecimal toBigDecimal(String valor){
+            String aux = valor.trim().replace("," ,".");
+            try {
+                return new BigDecimal(aux);
+            } catch (IllegalArgumentException e){
+                throw e;
+            }
     }
 
 }
